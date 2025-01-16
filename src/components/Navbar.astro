@@ -1,0 +1,90 @@
+---
+import NavbarElement from "./NavbarElement.astro";
+import { Image } from "astro:assets";
+---
+
+<nav class="bg-white">
+    <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-evenly mx-auto px-6 md:px-0"
+    >
+        <div class="relative h-16 mr-24">
+            <Image
+                width="84"
+                height="84"
+                alt="Logo"
+                src="/logo.png"
+                class="absolute object-contain object-center max-w-24 rounded-b-2xl"
+            />
+        </div>
+        <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+        >
+            <span class="sr-only">Open main menu</span>
+            <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15"></path>
+            </svg>
+        </button>
+        <div class="hidden w-full md:flex gap-24 md:w-auto" id="navbar-default">
+            <ul
+                class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+                <NavbarElement title="Inicio" href="#inicio" />
+                <NavbarElement title="Nosotros" href="#about" />
+                <NavbarElement title="Servicios" href="#projects" />
+                <NavbarElement title="Contacto" href="#contact" />
+            </ul>
+            <ul class="hidden md:flex gap-4">
+                <li
+                    class="p-1 hover:bg-custom-purple rounded-full fill-gray-700 hover:fill-white border border-gray-500"
+                >
+                <a href="#"
+                ><svg
+                    class="size-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 320 512"
+                    >
+                    <path
+                        d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"
+                    ></path></svg
+                ></a
+            >
+                </li>
+                <li
+                    class="p-1 hover:bg-custom-purple rounded-full fill-gray-700 hover:fill-white border border-gray-500"
+                >
+                    <a href="https://www.instagram.com/516clubdecorte/"
+                        ><svg class="size-4" 
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                            <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"></path>
+                        </svg></a
+                    >
+                </li>
+                <li
+                    class="p-1 hover:bg-custom-purple rounded-full fill-gray-700 hover:fill-white border border-gray-500"
+                >
+                    <a href="#"
+                        ><svg class="size-4"
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 24 24">
+                            <path d="M19.077,4.928C17.191,3.041,14.683,2.001,12.011,2c-5.506,0-9.987,4.479-9.989,9.985 c-0.001,1.76,0.459,3.478,1.333,4.992L2,22l5.233-1.237c1.459,0.796,3.101,1.215,4.773,1.216h0.004 c5.505,0,9.986-4.48,9.989-9.985C22.001,9.325,20.963,6.816,19.077,4.928z M16.898,15.554c-0.208,0.583-1.227,1.145-1.685,1.186 c-0.458,0.042-0.887,0.207-2.995-0.624c-2.537-1-4.139-3.601-4.263-3.767c-0.125-0.167-1.019-1.353-1.019-2.581 S7.581,7.936,7.81,7.687c0.229-0.25,0.499-0.312,0.666-0.312c0.166,0,0.333,0,0.478,0.006c0.178,0.007,0.375,0.016,0.562,0.431 c0.222,0.494,0.707,1.728,0.769,1.853s0.104,0.271,0.021,0.437s-0.125,0.27-0.249,0.416c-0.125,0.146-0.262,0.325-0.374,0.437 c-0.125,0.124-0.255,0.26-0.11,0.509c0.146,0.25,0.646,1.067,1.388,1.728c0.954,0.85,1.757,1.113,2.007,1.239 c0.25,0.125,0.395,0.104,0.541-0.063c0.146-0.166,0.624-0.728,0.79-0.978s0.333-0.208,0.562-0.125s1.456,0.687,1.705,0.812 c0.25,0.125,0.416,0.187,0.478,0.291C17.106,14.471,17.106,14.971,16.898,15.554z"></path>
+                        </svg></a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

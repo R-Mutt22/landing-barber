@@ -1,0 +1,25 @@
+---
+import JobCard from "./JobCard.astro";
+
+const JOBS: Job[] = [
+    {
+        title: "Inclusión",
+        description:
+            "Fomentamos un ambiente acogedor y seguro para todas las personas, independientemente de su identidad de género, orientación sexual o antecedentes. Creemos en la diversidad y en el respeto mutuo.",
+    },
+    {
+        title: "Calidad",
+        description:
+            "Nos comprometemos a ofrecer servicios de alta calidad, utilizando productos y técnicas que garanticen la satisfacción de nuestros clientes.",
+    },
+    {
+        title: "Creatividad",
+        description:
+            "Fomentamos la innovación y la expresión personal a través de nuestros servicios, permitiendo que cada cliente exprese su estilo único.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200">
+    {JOBS.map((job) => <JobCard job={job} />)}
+</ol>

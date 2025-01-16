@@ -1,11 +1,285 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Footer from "../components/Footer.astro";
+import JobTimeline from "../components/JobTimeline.astro";
+import Navbar from "../components/Navbar.astro";
+import Project from "../components/Project.astro";
+import Skill from "../components/Skill.astro";
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const SKILLS: Skill[] = [
+    {
+        name: "Barberia",
+        iconUrl: "/icons/icono peluqueria.svg",
+    },
+    {
+        name: "Infancias",
+        iconUrl: "/icons/peluqueria-masculina.svg",
+    },
+    {
+        name: "Tijera",
+        iconUrl: "/icons/tijeras.svg",
+    },
+    {
+        name: "Tinte de Cabello",
+        iconUrl: "/icons/peluqueria-aplicando-tinte-para-el-cabello-a-un-cliente-de-peluqueria.svg",
+    },
+    {
+        name: "Productos para el cuidado del cabello",
+        iconUrl: "/icons/peluqueria-lavar-el-cabello-de-un-cliente-con-champu-burbujas.svg",
+    },
+    {
+        name: "Navaja de Afeitar",
+        iconUrl: "/icons/herramienta-de-peluqueria-razor.svg",
+    },
+    {
+        name: "Peinado",
+        iconUrl: "/icons/situacion-de-peluqueria-de-dos-personas.svg",
+    },
+    {
+        name: "Sillón de Peluquería",
+        iconUrl: "/icons/sillon-de-peluqueria.svg",
+    },
+];
+
+const PROJECTS: Project[] = [
+    {
+        title: "⭐ Puntuación Perfecta",
+        urlImg: "/project1.jpg",
+        description:
+            "Con una calificación de 10 sobre 10 basada en las opiniones de nuestros clientes, 516 Club de Corte se ha ganado la confianza y el cariño de quienes nos visitan. Nuestros clientes destacan la belleza y funcionalidad de nuestro local, así como la comodidad y armonía que se respira en cada rincón.",
+        usedSkills: [
+            {
+                name: "Tijera",
+                iconUrl: "/icons/tijeras.svg",
+            },
+            {
+                name: "Infancias",
+                iconUrl: "/icons/peluqueria-masculina.svg",
+            },
+            {
+                name: "Tinte de Cabello",
+                iconUrl: "/icons/peluqueria-aplicando-tinte-para-el-cabello-a-un-cliente-de-peluqueria.svg",
+            },
+        ],
+    },
+    {
+        title: "🌈 Un Espacio Inclusivo",
+        urlImg: "/project2.jpg",
+        description:
+            "En 516 Club de Corte, creemos que la belleza no tiene género. Nos enorgullece ser un espacio amigable con la comunidad LGBTQ+, ofreciendo un ambiente seguro y acogedor para todas las personas, incluyendo a quienes se identifican como transgénero. Nuestros sanitarios unisex son solo una de las muchas formas en que demostramos nuestro compromiso con la inclusión y la igualdad.",
+        usedSkills: [
+            {
+                name: "Sillón de Peluquería",
+                iconUrl: "/icons/sillon-de-peluqueria.svg",
+            },
+            {
+                name: "Productos para el cuidado del cabello",
+                iconUrl: "/icons/peluqueria-lavar-el-cabello-de-un-cliente-con-champu-burbujas.svg",
+            },
+            {
+                name: "Barberia",
+                iconUrl: "/icons/icono peluqueria.svg",
+            },
+        ],
+    },
+    {
+        title: "✂️ Servicios de Primera",
+        urlImg: "/project3.jpg",
+        description:
+            "Desde barbería hasta peluquería, pasando por tratamientos estéticos y una academia de estética, en 516 Club de Corte tenemos todo lo que necesitas para realzar tu belleza. Nuestro equipo de profesionales está listo para brindarte un servicio excepcional y personalizado, adaptándose a tus necesidades y deseos.",
+        usedSkills: [
+            {
+                name: "Navaja de Afeitar",
+                iconUrl: "/icons/herramienta-de-peluqueria-razor.svg",
+            },
+            {
+                name: "Peinado",
+                iconUrl: "/icons/situacion-de-peluqueria-de-dos-personas.svg",
+            },
+            {
+                name: "Tijera",
+                iconUrl: "/icons/tijeras.svg",
+            },
+        ],
+    },
+    {
+        title: "📍 Ubicación Conveniente",
+        urlImg: "/project4.jpg",
+        description:
+            "Nos encontramos en Zeballos 1047, en el corazón de Rosario, lo que nos hace fácilmente accesibles para todos. Ven y descubre un lugar donde la estética se encuentra con la comunidad.",
+        usedSkills: [
+            {
+                name: "Sillon de Peluqueria",
+                iconUrl: "/icons/sillon-de-peluqueria.svg",
+            },
+            {
+                name: "Barberia",
+                iconUrl: "/icons/icono peluqueria.svg",
+            },
+            {
+                name: "Tijera",
+                iconUrl: "/icons/tijeras.svg",
+            },
+        ],
+    },
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="516 Club de Corte">
+    <header
+        id="inicio"
+        class="h-dvh bg-[url('/fondo.webp')] bg-cover bg-center flex flex-col justify-between"
+    > 
+        <Navbar />
+        <div class="flex flex-col items-center gap-1">
+            <h2
+                class="text-xl md:text-2xl lg:text-3xl border-custom-purple text-center text-white"
+            >
+				Bienvenido a <span
+                class="text-custom-purple">516 Club de Corte</span
+            </h2>
+            <h3 class="text-2xl md:text-3xl lg:text-4xl text-center text-white">
+                Tu Refugio <span
+                    class="text-custom-purple">en Rosario</span
+                >.
+            </h3>
+        </div>
+        <div class="flex justify-center mb-10">
+            <a href="#about" class="p-4 bg-custom-purple_darker rounded-full">
+                <img
+                    src="/icons/down-arrow.svg"
+                    class="size-6 animate-bounce motion-reduce:animate-none"
+                    alt="Arrow"
+                />
+            </a>
+        </div>
+    </header>
+    <main>
+        <section
+            id="about"
+            class="bg-custom-purple_darker flex flex-col md:flex-row gap-4 md:gap-12 p-4"
+        >
+            <article class="flex flex-col gap-2">
+                <h3 class="text-center text-lg md:text-xl text-white font-bold">
+                    Estas en 516 Club de Corte
+                </h3>
+                <div class="flex justify-center -mt-2">
+                    <span class="text-center text-gray-300"
+                        >¡Has llegado al sitio indicado!</span
+                    >
+                </div>
+                <div class="flex justify-center gap-2 flex-wrap">
+                    {SKILLS.map((skill) => <Skill skill={skill} />)}
+                </div>
+                <div class="flex flex-col gap-1 text-gray-300 p-2">
+                    <h3 class="text-lg md:text-xl text-white font-bold">Quiénes Somos</h3>
+					<p>
+						En <b>516 Club de Corte</b>, no solo ofrecemos servicios de estética; creamos un espacio donde cada persona se siente valorada y respetada. Nuestro local es un refugio para la comunidad LGBTQ+, con un ambiente seguro y amigable. Contamos con sanitarios unisex y un equipo comprometido con la inclusión y la igualdad.
+                    </p>
+					<h3 class="text-lg md:text-xl text-white font-bold">Nuestra Misión</h3>
+					<p>
+                        Nuestra misión en <b>516 Club de Corte</b> es proporcionar un espacio de belleza inclusivo y profesional donde cada cliente se sienta valorado y respetado. Nos dedicamos a ofrecer servicios de estética de alta calidad que realcen la belleza individual, promoviendo la confianza y el bienestar personal en un ambiente acogedor y seguro..
+                    </p>
+					<h3 class="text-lg md:text-xl text-white font-bold">Nuestra visión</h3>
+					<p>
+                        Nuestra visión es ser reconocidos como el centro de estética líder en Rosario, conocido por nuestra dedicación a la inclusión, la calidad y la innovación en el sector de la belleza. Aspiramos a crear un espacio donde todas las personas, sin importar su identidad, puedan sentirse libres de expresarse y recibir servicios de belleza excepcionales que reflejen su autenticidad.
+                    </p>
+                </div>
+            </article>
+            <article>
+                <h3
+                    class="text-center text-lg md:text-xl text-white font-bold mb-2"
+                >
+                    Nuestros Valores
+                </h3>
+                <JobTimeline />
+            </article>
+        </section>
+        <section
+            id="projects"
+            class="max-w-screen-lg mx-auto grid place-content-center gap-12"
+        >
+            <div class="flex justify-center mt-8">
+                <h3
+                    class="w-fit border-b-custom-purple text-xl md:text-2xl lg:text-4xl font-semibold"
+                >
+                    ¿Por qué elegir 516 Club de Corte?
+                </h3>
+            </div>
+            <div class="w-full grid place-content-center gap-16">
+                {
+                    PROJECTS.map((project, index) => (
+                        <Project project={project} index={index} />
+                    ))
+                }
+            </div>
+        </section>
+        <section
+            id="contact"
+            class="mt-6 relative h-[610px] xs:h-[590px] sl:h-[540px] sm:h-[560px] lg:h-[610px]"
+        >
+            <div
+                class="rounded-lg bg-white shadow-2xl py-4 lg:py-8 px-4 mx-auto max-w-screen-md"
+            >
+                <h2
+                    class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
+                >
+                    ¡Agenda tu cita hoy mismo!
+                </h2>
+                <p
+                    class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl"
+                >
+                    Descubre por qué somos el lugar más recomendado en Rosario.<br>¡Te esperamos en 516 Club de Corte, donde la belleza y la inclusión son nuestra prioridad!
+                </p>
+                <form action="#" class="space-y-8">
+                    <div>
+                        <label
+                            for="email"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                            >Email</label
+                        >
+                        <input
+                            type="email"
+                            id="email"
+                            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            placeholder="nombre@gmail.com"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label
+                            for="subject"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                            >Asunto</label
+                        >
+                        <input
+                            type="text"
+                            id="subject"
+                            class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                            placeholder="En que podemos ayudarte"
+                            required
+                        />
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label
+                            for="message"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                            >Mensaje</label
+                        >
+                        <textarea
+                            id="message"
+                            rows="6"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Dejanos un mensaje..."></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >Enviar mensaje</button
+                    >
+                </form>
+            </div>
+        </section>
+    </main>
+    <Footer />
 </Layout>
