@@ -1,8 +1,14 @@
 ---
+/**
+ * Este archivo define la estructura básica del layout HTML para la aplicación.
+ * Utiliza Astro para manejar las propiedades y renderizar el contenido dinámico.
+ */
 interface Props {
+    /** Título de la página */
     title: string;
 }
 
+// Extrae la propiedad 'title' de las propiedades de Astro
 const { title } = Astro.props;
 ---
 
@@ -23,7 +29,9 @@ const { title } = Astro.props;
             rel="stylesheet"
         />
     </head>
+    <!-- El contenido del cuerpo de la página se insertará aquí -->
     <body>
+        <!-- ...contenido... -->
         <slot />
     </body>
 </html>
