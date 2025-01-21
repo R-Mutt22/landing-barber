@@ -15,7 +15,7 @@ Este es un proyecto de una página de aterrizaje para una barbería. La página 
 - HTML5
 - CSS3
 - JavaScript
-- [Framework o biblioteca adicional si aplica]
+- [ASTRO]
 
 # Astro Starter Kit: Basics
 
