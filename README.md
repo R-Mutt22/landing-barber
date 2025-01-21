@@ -1,3 +1,22 @@
+# Landing Barber
+
+Este es un proyecto de una página de aterrizaje para una barbería. La página está diseñada para atraer a nuevos clientes y proporcionar información sobre los servicios y el equipo de la barbería.
+
+## Características
+
+- **Diseño Responsivo**: La página se adapta a diferentes tamaños de pantalla, desde dispositivos móviles hasta pantallas de escritorio.
+- **Información de Servicios**: Sección detallada sobre los servicios ofrecidos por la barbería.
+- **Equipo Profesional**: Información sobre los barberos y su experiencia.
+- **Formulario de Contacto**: Un formulario para que los clientes potenciales puedan hacer consultas o reservar citas.
+- **Galería de Imágenes**: Muestra de los trabajos realizados y el ambiente de la barbería.
+
+## Tecnologías Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- [Framework o biblioteca adicional si aplica]
+
 # Astro Starter Kit: Basics
 
 ```sh
