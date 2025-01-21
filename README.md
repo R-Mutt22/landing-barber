@@ -14,6 +14,7 @@ Este es un proyecto de una página de aterrizaje para una barbería. La página 
 
 - HTML5
 - CSS3
+- Tailwind
 - JavaScript
 - [ASTRO]
 
