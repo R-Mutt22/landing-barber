@@ -18,6 +18,30 @@ Este es un proyecto de una página de aterrizaje para una barbería. La página 
 - JavaScript
 - [ASTRO]
 
+## Contribuciones
+
+Las contribuciones son bienvenidas. Por favor, siga estos pasos:
+
+1. Haga un fork del repositorio.
+2. Cree una nueva rama para su función o corrección de errores:
+
+   ```bash
+   git checkout -b feature/nueva-funcion
+
+3. Realice sus cambios y haga commit de ellos:   
+
+   ```bash
+   git commit -m 'Agrega nueva función'
+
+4. Empuje sus cambios a la rama:
+   ```bash
+   git push origin feature/nueva-funcion
+
+5. Cree un Pull Request en GitHub.
+ 
+## Licencia
+Este proyecto está bajo la Licencia MIT. Consulte el archivo LICENSE
+
 # Astro Starter Kit: Basics
 
 ```sh
