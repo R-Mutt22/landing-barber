@@ -11,35 +11,35 @@ import emailjs from "emailjs-com";
 const SKILLS: Skill[] = [
     {
         name: "Barberia",
-        iconUrl: "landing-barber/icons/icono peluqueria.svg",
+        iconUrl: "/landing-barber/icons/icono peluqueria.svg",
     },
     {
         name: "Infancias",
-        iconUrl: "landing-barber/icons/peluqueria-masculina.svg",
+        iconUrl: "/landing-barber/icons/peluqueria-masculina.svg",
     },
     {
         name: "Tijera",
-        iconUrl: "landing-barber/icons/tijeras.svg",
+        iconUrl: "/landing-barber/icons/tijeras.svg",
     },
     {
         name: "Tinte de Cabello",
-        iconUrl: "landing-barber/icons/peluqueria-aplicando-tinte-para-el-cabello-a-un-cliente-de-peluqueria.svg",
+        iconUrl: "/landing-barber/icons/peluqueria-aplicando-tinte-para-el-cabello-a-un-cliente-de-peluqueria.svg",
     },
     {
         name: "Productos para el cuidado del cabello",
-        iconUrl: "landing-barber/icons/peluqueria-lavar-el-cabello-de-un-cliente-con-champu-burbujas.svg",
+        iconUrl: "/landing-barber/icons/peluqueria-lavar-el-cabello-de-un-cliente-con-champu-burbujas.svg",
     },
     {
         name: "Navaja de Afeitar",
-        iconUrl: "landing-barber/icons/herramienta-de-peluqueria-razor.svg",
+        iconUrl: "/landing-barber/icons/herramienta-de-peluqueria-razor.svg",
     },
     {
         name: "Peinado",
-        iconUrl: "landing-barber/icons/situacion-de-peluqueria-de-dos-personas.svg",
+        iconUrl: "/landing-barber/icons/situacion-de-peluqueria-de-dos-personas.svg",
     },
     {
         name: "Sillón de Peluquería",
-        iconUrl: "landing-barber/icons/sillon-de-peluqueria.svg",
+        iconUrl: "/landing-barber/icons/sillon-de-peluqueria.svg",
     },
 ];
 
@@ -52,15 +52,15 @@ const PROJECTS: Project[] = [
         usedSkills: [
             {
                 name: "Tijera",
-                iconUrl: "landing-barber/icons/tijeras.svg",
+                iconUrl: "/landing-barber/icons/tijeras.svg",
             },
             {
                 name: "Infancias",
-                iconUrl: "landing-barber/icons/peluqueria-masculina.svg",
+                iconUrl: "/landing-barber/icons/peluqueria-masculina.svg",
             },
             {
                 name: "Tinte de Cabello",
-                iconUrl: "landing-barber/icons/peluqueria-aplicando-tinte-para-el-cabello-a-un-cliente-de-peluqueria.svg",
+                iconUrl: "/landing-barber/icons/peluqueria-aplicando-tinte-para-el-cabello-a-un-cliente-de-peluqueria.svg",
             },
         ],
     },
@@ -72,15 +72,15 @@ const PROJECTS: Project[] = [
         usedSkills: [
             {
                 name: "Sillón de Peluquería",
-                iconUrl: "landing-barber/icons/sillon-de-peluqueria.svg",
+                iconUrl: "/landing-barber/icons/sillon-de-peluqueria.svg",
             },
             {
                 name: "Productos para el cuidado del cabello",
-                iconUrl: "landing-barber/icons/peluqueria-lavar-el-cabello-de-un-cliente-con-champu-burbujas.svg",
+                iconUrl: "/landing-barber/icons/peluqueria-lavar-el-cabello-de-un-cliente-con-champu-burbujas.svg",
             },
             {
                 name: "Barberia",
-                iconUrl: "landing-barber/icons/icono peluqueria.svg",
+                iconUrl: "/landing-barber/icons/icono peluqueria.svg",
             },
         ],
     },
@@ -92,15 +92,15 @@ const PROJECTS: Project[] = [
         usedSkills: [
             {
                 name: "Navaja de Afeitar",
-                iconUrl: "landing-barber/icons/herramienta-de-peluqueria-razor.svg",
+                iconUrl: "/landing-barber/icons/herramienta-de-peluqueria-razor.svg",
             },
             {
                 name: "Peinado",
-                iconUrl: "landing-barber/icons/situacion-de-peluqueria-de-dos-personas.svg",
+                iconUrl: "/landing-barber/icons/situacion-de-peluqueria-de-dos-personas.svg",
             },
             {
                 name: "Tijera",
-                iconUrl: "landing-barber/icons/tijeras.svg",
+                iconUrl: "/landing-barber/icons/tijeras.svg",
             },
         ],
     },
@@ -112,15 +112,15 @@ const PROJECTS: Project[] = [
         usedSkills: [
             {
                 name: "Sillon de Peluqueria",
-                iconUrl: "landing-barber/icons/sillon-de-peluqueria.svg",
+                iconUrl: "/landing-barber/icons/sillon-de-peluqueria.svg",
             },
             {
                 name: "Barberia",
-                iconUrl: "landing-barber/icons/icono peluqueria.svg",
+                iconUrl: "/landing-barber/icons/icono peluqueria.svg",
             },
             {
                 name: "Tijera",
-                iconUrl: "landing-barber/icons/tijeras.svg",
+                iconUrl: "/landing-barber/icons/tijeras.svg",
             },
         ],
     },
@@ -130,7 +130,7 @@ const PROJECTS: Project[] = [
 <Layout title="516 Club de Corte">
     <header
         id="inicio"
-        class="h-dvh bg-[url('landing-barber/fondo.webp')] bg-cover bg-center flex flex-col justify-between"
+        class="h-dvh bg-[url('/landing-barber/fondo.webp')] bg-cover bg-center flex flex-col justify-between"
     > 
         <Navbar />
         <div class="flex flex-col items-center gap-1">
@@ -147,9 +147,9 @@ const PROJECTS: Project[] = [
             </h2>
         </div>
         <div class="flex justify-center mb-10">
-            <a href="landing-barber/about" class="p-4 bg-custom-purple_darker rounded-full">
+            <a href="/landing-barber/about" class="p-4 bg-custom-purple_darker rounded-full">
                 <img
-                    src="landing-barber/icons/down-arrow.svg"
+                    src="/landing-barber/icons/down-arrow.svg"
                     class="size-6 animate-bounce motion-reduce:animate-none"
                     alt="Arrow"
                 />
