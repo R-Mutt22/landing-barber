@@ -7,7 +7,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://R-Mutt22.github.io',
-  base: 'landing-barber',
+  base: '/landing-barber',
   
   integrations: [tailwind()],
 
