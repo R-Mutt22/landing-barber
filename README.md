@@ -7,7 +7,7 @@ Este es un proyecto de una página de aterrizaje para una barbería. La página 
 - **Diseño Responsivo**: La página se adapta a diferentes tamaños de pantalla, desde dispositivos móviles hasta pantallas de escritorio.
 - **Información de Servicios**: Sección detallada sobre los servicios ofrecidos por la barbería.
 - **Equipo Profesional**: Información sobre los barberos y su experiencia.
-- **Formulario de Contacto**: Un formulario para que los clientes potenciales puedan hacer consultas o reservar citas.
+- **Formulario de Contacto**: Un formulario para que los clientes potenciales puedan hacer consultas.
 - **Galería de Imágenes**: Muestra de los trabajos realizados y el ambiente de la barbería.
 
 ## Tecnologías Utilizadas

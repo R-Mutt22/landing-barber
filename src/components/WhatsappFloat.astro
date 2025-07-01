@@ -1,0 +1,64 @@
+---
+// Componente Astro para el botón flotante de WhatsApp (reemplazo del script inline)
+---
+<a href="https://wa.me/5493410000000?text=Hola%2C%20quiero%20sacar%20un%20turno%20en%20516%20Club%20de%20Corte" target="_blank" rel="noopener" id="whatsapp-float" aria-label="Chatear por WhatsApp con 516 Club de Corte" tabindex="0">
+  <img src="/landing-barber/icons/whatsapp.svg" alt="WhatsApp" class="size-8" />
+  <span class="whatsapp-tooltip" role="tooltip">Chatear por WhatsApp</span>
+</a>
+<style>
+#whatsapp-float {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 50;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 16px;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+#whatsapp-float:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.28);
+  transform: scale(1.08);
+}
+#whatsapp-float:focus .whatsapp-tooltip,
+#whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+.whatsapp-tooltip {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+  z-index: 100;
+}
+@media (max-width: 640px) {
+  #whatsapp-float {
+    bottom: 8px;
+    right: 8px;
+    padding: 8px;
+  }
+  #whatsapp-float img {
+    width: 32px;
+    height: 32px;
+  }
+}
+.size-8 {
+  width: 2rem;
+  height: 2rem;
+}
+</style>
