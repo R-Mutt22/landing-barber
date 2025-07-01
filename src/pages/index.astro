@@ -6,7 +6,6 @@ import Project from "../components/Project.astro";
 import Skill from "../components/Skill.astro";
 import Layout from "../layouts/Layout.astro";
 import { useEffect } from "react";
-import emailjs from "emailjs-com";
 
 const SKILLS: Skill[] = [
     {
@@ -125,6 +124,7 @@ const PROJECTS: Project[] = [
         ],
     },
 ];
+
 ---
 
 <Layout title="516 Club de Corte">
@@ -137,7 +137,7 @@ const PROJECTS: Project[] = [
             <h2
                 class="text-xl md:text-2xl lg:text-3xl border-custom-purple text-center text-white"
             >
-				Bienvenido a <span
+                Bienvenido a <span
                 class="text-custom-purple">516 Club de Corte</span>
             </h2>
             <h2 class="text-2xl md:text-3xl lg:text-4xl text-center text-white">
@@ -175,15 +175,15 @@ const PROJECTS: Project[] = [
                 </div>
                 <div class="flex flex-col gap-1 text-gray-300 p-2">
                     <h3 class="text-lg md:text-xl text-white font-bold">Quiénes Somos</h3>
-					<p>
-						En <b>516 Club de Corte</b>, no solo ofrecemos servicios de estética; creamos un espacio donde cada persona se siente valorada y respetada. Nuestro local es un refugio para la comunidad LGBTQ+, con un ambiente seguro y amigable. Contamos con sanitarios unisex y un equipo comprometido con la inclusión y la igualdad.
+                    <p>
+                        En <b>516 Club de Corte</b>, no solo ofrecemos servicios de estética; creamos un espacio donde cada persona se siente valorada y respetada. Nuestro local es un refugio para la comunidad LGBTQ+, con un ambiente seguro y amigable. Contamos con sanitarios unisex y un equipo comprometido con la inclusión y la igualdad.
                     </p>
-					<h3 class="text-lg md:text-xl text-white font-bold">Nuestra Misión</h3>
-					<p>
+                    <h3 class="text-lg md:text-xl text-white font-bold">Nuestra Misión</h3>
+                    <p>
                         Nuestra misión en <b>516 Club de Corte</b> es proporcionar un espacio de belleza inclusivo y profesional donde cada cliente se sienta valorado y respetado. Nos dedicamos a ofrecer servicios de estética de alta calidad que realcen la belleza individual, promoviendo la confianza y el bienestar personal en un ambiente acogedor y seguro..
                     </p>
-					<h3 class="text-lg md:text-xl text-white font-bold">Nuestra visión</h3>
-					<p>
+                    <h3 class="text-lg md:text-xl text-white font-bold">Nuestra visión</h3>
+                    <p>
                         Nuestra visión es ser reconocidos como el centro de estética líder en Rosario, conocido por nuestra dedicación a la inclusión, la calidad y la innovación en el sector de la belleza. Aspiramos a crear un espacio donde todas las personas, sin importar su identidad, puedan sentirse libres de expresarse y recibir servicios de belleza excepcionales que reflejen su autenticidad.
                     </p>
                 </div>
@@ -233,7 +233,7 @@ const PROJECTS: Project[] = [
                 >
                     Descubre por qué somos el lugar más recomendado en Rosario.<br>¡Te esperamos en 516 Club de Corte, donde la belleza y la inclusión son nuestra prioridad!
                 </p>
-                <form action="#" class="space-y-8">
+                <form id="contact-form" class="space-y-8">
                     <div>
                         <label
                             for="email"
@@ -243,6 +243,7 @@ const PROJECTS: Project[] = [
                         <input
                             type="email"
                             id="email"
+                            name="email"
                             class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                             placeholder="nombre@gmail.com"
                             required
@@ -257,6 +258,7 @@ const PROJECTS: Project[] = [
                         <input
                             type="text"
                             id="subject"
+                            name="subject"
                             class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                             placeholder="En que podemos ayudarte"
                             required
@@ -270,6 +272,7 @@ const PROJECTS: Project[] = [
                         >
                         <textarea
                             id="message"
+                            name="message"
                             rows="6"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder="Dejanos un mensaje..."></textarea>
@@ -280,6 +283,18 @@ const PROJECTS: Project[] = [
                         >Enviar mensaje</button
                     >
                 </form>
+                <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                <script is:inline>
+                  const form = document.getElementById("contact-form");
+                  if (form) {
+                    form.addEventListener("submit", function(e) {
+                      e.preventDefault();
+                      window.emailjs.sendForm('service_xxxxx', 'template_xxxxx', form, 'publicKey_xxxxx')
+                        .then(() => alert('Mensaje enviado con éxito!'))
+                        .catch(() => alert('Error al enviar el mensaje.'));
+                    });
+                  }
+                </script>
             </div>
         </section>
     </main>
